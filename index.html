@@ -6,7 +6,9 @@
   <title>이름으로 보는 진로 분석</title>
   <style>
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
     }
     body {
       font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
@@ -16,39 +18,67 @@
       padding: 20px;
     }
     .container {
-      max-width: 800px; margin: 20px auto; background: white;
-      border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      padding: 30px; transition: all 0.3s ease;
+      max-width: 800px; 
+      margin: 20px auto; 
+      background: white;
+      border-radius: 20px; 
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      padding: 30px; 
+      transition: all 0.3s ease;
     }
     .container:hover {
-      transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      transform: translateY(-5px); 
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
     }
     .title {
-      text-align: center; font-size: 28px; margin-bottom: 30px;
-      color: #2d3436; font-weight: 700; position: relative; padding-bottom: 15px;
+      text-align: center; 
+      font-size: 28px; 
+      margin-bottom: 30px;
+      color: #2d3436; 
+      font-weight: 700; 
+      position: relative; 
+      padding-bottom: 15px;
     }
     .title:after {
-      content: ''; position: absolute; bottom: 0; left: 50%;
-      transform: translateX(-50%); width: 60px; height: 4px;
+      content: ''; 
+      position: absolute; 
+      bottom: 0; 
+      left: 50%;
+      transform: translateX(-50%); 
+      width: 60px; 
+      height: 4px;
       background: linear-gradient(to right, #6c5ce7, #a8a4e2);
       border-radius: 2px;
     }
     .input-group {
-      display: flex; gap: 15px; margin-bottom: 30px;
+      display: flex; 
+      gap: 15px; 
+      margin-bottom: 30px;
     }
     input {
-      flex: 1; padding: 15px 20px; border: 2px solid #e1e1e1;
-      border-radius: 12px; font-size: 16px; transition: all 0.3s ease;
+      flex: 1; 
+      padding: 15px 20px; 
+      border: 2px solid #e1e1e1;
+      border-radius: 12px; 
+      font-size: 16px; 
+      transition: all 0.3s ease;
       box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
     }
     input:focus {
-      border-color: #6c5ce7; outline: none;
+      border-color: #6c5ce7; 
+      outline: none;
       box-shadow: 0 0 0 3px rgba(108,92,231,0.2);
     }
     button {
-      padding: 15px 30px; background: linear-gradient(135deg,#6c5ce7 0%,#a8a4e2 100%);
-      color: white; border: none; border-radius: 12px; cursor: pointer;
-      font-size: 16px; font-weight: 600; transition: all 0.3s ease;
+      padding: 15px 30px; 
+      background: linear-gradient(135deg,#6c5ce7 0%,#a8a4e2 100%);
+      color: white; 
+      border: none; 
+      border-radius: 12px; 
+      cursor: pointer;
+      font-size: 16px; 
+      font-weight: 600; 
+      transition: all 0.3s ease;
       box-shadow: 0 4px 6px rgba(108,92,231,0.2);
     }
     button:hover {
@@ -59,71 +89,127 @@
       transform: translateY(1px);
     }
     .error {
-      color: #e74c3c; background-color: #fde8e7;
-      padding: 15px 20px; border-radius: 12px; margin-bottom: 20px;
-      display: none; animation: slideIn 0.3s ease;
+      color: #e74c3c; 
+      background-color: #fde8e7;
+      padding: 15px 20px; 
+      border-radius: 12px; 
+      margin-bottom: 20px;
+      display: none; 
+      animation: slideIn 0.3s ease;
     }
     .result {
-      background-color: #f8f9fa; padding: 25px; border-radius: 15px;
-      display: none; animation: slideIn 0.4s ease;
+      background-color: #f8f9fa; 
+      padding: 25px; 
+      border-radius: 15px;
+      display: none; 
+      animation: slideIn 0.4s ease;
     }
     @keyframes slideIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+      }
+      to   { 
+        opacity: 1; 
+        transform: translateY(0); 
+      }
     }
     .result h3 {
-      color: #2d3436; margin-bottom: 20px; font-size: 22px; font-weight:700;
+      color: #2d3436; 
+      margin-bottom: 20px; 
+      font-size: 22px; 
+      font-weight:700;
     }
     .result h4 {
-      color: #6c5ce7; margin: 20px 0 15px; font-size: 18px; font-weight:600;
+      color: #6c5ce7; 
+      margin: 20px 0 15px; 
+      font-size: 18px; 
+      font-weight:600;
     }
     .detail-list {
-      list-style-type: none; margin-left: 10px;
+      list-style-type: none; 
+      margin-left: 10px;
     }
     .detail-item {
-      margin-bottom: 15px; padding-left: 5px; position: relative;
+      margin-bottom: 15px; 
+      padding-left: 5px; 
+      position: relative;
     }
     .detail-item strong {
-      color: #6c5ce7; display: block; margin-bottom: 3px; font-weight:600;
+      color: #6c5ce7; 
+      display: block; 
+      margin-bottom: 3px; 
+      font-weight:600;
     }
     .career-group {
-      margin: 15px 0; padding: 15px 20px; background: white;
-      border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin: 15px 0; 
+      padding: 15px 20px; 
+      background: white;
+      border-radius: 12px; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
       transition: all 0.3s ease;
     }
     .career-group:hover {
-      transform: translateX(5px); box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transform: translateX(5px); 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .career-group h5 {
-      color: #2d3436; margin-bottom: 10px; font-size:16px; font-weight:600;
+      color: #2d3436; 
+      margin-bottom: 10px; 
+      font-size:16px; 
+      font-weight:600;
     }
     .career-group p {
-      color: #636e72; line-height:1.6;
+      color: #636e72; 
+      line-height:1.6;
     }
     #advice-text {
-      padding: 15px 20px; background: white; border-radius:12px;
-      color: #2d3436; line-height:1.8; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 15px 20px; 
+      background: white; 
+      border-radius:12px;
+      color: #2d3436; 
+      line-height:1.8; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
       white-space: pre-line;  /* 줄바꿈 처리 */
     }
     .bottom-btns-container {
-      text-align: center; margin-top: 30px;
+      text-align: center; 
+      margin-top: 30px;
     }
     .bottom-btns-container a {
-      display: inline-block; margin: 0 10px; padding:12px 20px; border-radius:8px;
-      text-decoration: none; color: #fff; background:#6c5ce7; font-weight:600;
+      display: inline-block; 
+      margin: 0 10px; 
+      padding:12px 20px; 
+      border-radius:8px;
+      text-decoration: none; 
+      color: #fff; 
+      background:#6c5ce7; 
+      font-weight:600;
       transition: background 0.3s;
     }
     .bottom-btns-container a:hover {
       background: #a8a4e2;
     }
     @media (max-width:600px) {
-      .container { padding:20px; margin:10px; }
-      .title { font-size:24px; }
-      .input-group { flex-direction:column; }
-      button { width:100%; }
-      .result { padding:15px; }
+      .container { 
+        padding:20px; 
+        margin:10px; 
+      }
+      .title { 
+        font-size:24px; 
+      }
+      .input-group { 
+        flex-direction:column; 
+      }
+      button { 
+        width:100%; 
+      }
+      .result { 
+        padding:15px; 
+      }
       .bottom-btns-container a {
-        display:block; margin:10px auto;
+        display:block; 
+        margin:10px auto;
       }
     }
   </style>
@@ -139,10 +225,15 @@
       </div>
     </form>
 
+    <!-- 에러 메시지 -->
     <div id="error-message" class="error"></div>
 
+    <!-- 결과 영역 -->
     <div id="result" class="result">
       <h3>진로 분석 결과</h3>
+      
+      <!-- 매핑되지 않은 글자 안내 -->
+      <div id="missing-section" style="margin-bottom:15px;"></div>
 
       <!-- 성격 특성 -->
       <div id="personality-section">
@@ -169,8 +260,8 @@
       </div>
     </div>
 
+    <!-- 하단 버튼 -->
     <div class="bottom-btns-container">
-      <!-- 실제 링크는 직접 수정 -->
       <a href="https://www.instagram.com/niceple_tarot" target="_blank">인스타그램</a>
       <a href="https://pf.kakao.com/_Cgxcdn" target="_blank">카카오채널</a>
       <a href="https://niceple.com/" target="_blank">수비학자사몰</a>
@@ -180,56 +271,53 @@
 
   <script>
     /****************************************************************
-      (1) 매핑 로직: 이름 '서복동' -> ['서','복','동'] -> [9,5,7] 
-          => union(9,5,7)에 대한 data를 합산
-    ****************************************************************/
+     * (1) 이름 -> 숫자 매핑
+     ****************************************************************/
     const numberMappings = {
-         "여": "2",
-         // 3번
-         "민": "3", "임": "3", "노": "3", "모": "3", "삼": "3", "묵": "3", "문": "3", "미": "3", "누": "3", 
-         "흠": "3", "움": "3", "점": "3", "무": "3", "겸": "3", "림": "3", "매": "3", "맹": "3","나": "3", 
-         "남": "3", "마": "3", "명": "3", "목": "3","김": "3", "금": "3", "막": "3", "봄": "3", "내": "3",
-         // 4번
-         "석": "4", "로": "4", "학": "4", "슬": "4","라": "4","종": "4","루": "4","일": "4","식": "4","래": "4","례": "4",
-         "록": "4","소": "4","리": "4","말": "4","란": "4","숙": "4","근": "4","솔": "4","순": "4",
-         // 5번
-         "태": "5","택": "5","규": "5","분": "5","돔": "5","던": "5","만": "5","엽": "5","평": "5","효": "5","훈": "5",
-         "도": "5","봄": "5","다": "5","둔": "5","령": "5","봉": "5","탁": "5","탄": "5","대": "5","덕": "5","보": "5",
-         "단": "5","득": "5","련": "5","운": "5","편": "5","섭": "5","복": "5","필": "5","담": "5","듬": "5","렴": "5",
-         "엄": "5","표": "5","포": "5","돈": "5","두": "5","갑": "5","당": "5","딘": "5","후": "5","욱": "5","팽": "5",
-         // 6번
-         "정": "6",
-         // 7번
-         "최": "7","동": "7","차": "7","추": "7","건": "7","채": "7","화": "7","좌": "7","찬": "7","하": "7","준": "7",
-         // 8번
-         "박": "8","가": "8","람": "8","혜": "8","늘": "8","호": "8","해": "8","예": "8","중": "8","궁": "8","룡": "8",
-         "술": "8","곽": "8","계": "8","옹": "8","혁": "8","강": "8","율": "8","용": "8","송": "8","응": "8","사": "8",
-         "병": "8","열": "8","비": "8","군": "8","바": "8","야": "8","육": "8","방": "8","빙": "8","곡": "8","양": "8",
-         "백": "8","승": "8","옥": "8","을": "8","상": "8","오": "8","흥": "8","거": "8","늠": "8","반": "8","억": "8",
-         "남궁": "8","함": "8","독고": "8","황: : "8"
-         // 9번
-         "순": "9","이": "9","서": "9","선": "9","녀": "9","존": "9","회": "9","선우": "9","지": "9","향": "9","장": "9",
-         "제": "9","주": "9","철": "9","님": "9","제갈": "9","심": "9","수": "9","조": "9","재": "9","성": "9","자": "9",
-         "기": "9","실": "9","찰": "9","어": "9","요": "9","희": "9","홍": "9","유": "9","우": "9","언": "9","귀": "9",
-         "춘": "9","설": "9",
-         // 10번
-         "안": "10","연": "10","환": "10","윤": "10","인": "10","란": "10","원": "10","빈": "10","론": "10","완": "10",
-         "전": "10","온": "10","린": "10","한": "10","손": "10",
-         // 11번
-         "현": "11","진": "11","경": "11","극": "11","신": "11","청": "11","피": "11","염": "11","키": "11","창": "11",
-         "간": "11","닷": "11","심": "11","척": "11","타": "11","음": "11","천": "11","세": "11","감": "11","본": "11",
-         "션": "11","첨": "11","탐": "11","품": "11","위": "11","균": "11","견": "11","벼": "11","숀": "11","초": "11",
-         "파": "11","총": "11","의": "11","검": "11","곤": "11","변": "11","직": "11","카": "11","판": "11","휘": "11"
-       };
-
+      "여": "2",
+      // 3번
+      "민": "3","임": "3","노":"3","모":"3","삼":"3","묵":"3","문":"3","미":"3","누":"3",
+      "흠":"3","움":"3","점":"3","무":"3","겸":"3","림":"3","매":"3","맹":"3","나":"3",
+      "남":"3","마":"3","명":"3","목":"3","김":"3","금":"3","막":"3","봄":"3","내":"3",
+      // 4번
+      "석":"4","로":"4","학":"4","슬":"4","라":"4","종":"4","루":"4","일":"4","식":"4","래":"4",
+      "례":"4","록":"4","소":"4","리":"4","말":"4","란":"4","숙":"4","근":"4","솔":"4","순":"4",
+      // 5번
+      "태":"5","택":"5","규":"5","분":"5","돔":"5","던":"5","만":"5","엽":"5","평":"5","효":"5",
+      "훈":"5","도":"5","봄":"5","다":"5","둔":"5","령":"5","봉":"5","탁":"5","탄":"5","대":"5",
+      "덕":"5","보":"5","단":"5","득":"5","련":"5","운":"5","편":"5","섭":"5","복":"5","필":"5",
+      "담":"5","듬":"5","렴":"5","엄":"5","표":"5","포":"5","돈":"5","두":"5","갑":"5","당":"5",
+      "딘":"5","후":"5","욱":"5","팽":"5",
+      // 6번
+      "정":"6",
+      // 7번
+      "최":"7","동":"7","차":"7","추":"7","건":"7","채":"7","화":"7","좌":"7","찬":"7","하":"7","준":"7",
+      // 8번
+      "박":"8","가":"8","람":"8","혜":"8","늘":"8","호":"8","해":"8","예":"8","중":"8","궁":"8","룡":"8",
+      "술":"8","곽":"8","계":"8","옹":"8","혁":"8","강":"8","율":"8","용":"8","송":"8","응":"8","사":"8",
+      "병":"8","열":"8","비":"8","군":"8","바":"8","야":"8","육":"8","방":"8","빙":"8","곡":"8","양":"8",
+      "백":"8","승":"8","옥":"8","을":"8","상":"8","오":"8","흥":"8","거":"8","늠":"8","반":"8","억":"8",
+      "남궁":"8","함":"8","독고":"8","황" : "8", // 오타 가능성 있지만 원문 그대로 유지
+      // 9번
+      "순":"9","이":"9","서":"9","선":"9","녀":"9","존":"9","회":"9","선우":"9","지":"9","향":"9","장":"9",
+      "제":"9","주":"9","철":"9","님":"9","제갈":"9","심":"9","수":"9","조":"9","재":"9","성":"9","자":"9",
+      "기":"9","실":"9","찰":"9","어":"9","요":"9","희":"9","홍":"9","유":"9","우":"9","언":"9","귀":"9",
+      "춘":"9","설":"9",
+      // 10번
+      "안":"10","연":"10","환":"10","윤":"10","인":"10","란":"10","원":"10","빈":"10","론":"10","완":"10",
+      "전":"10","온":"10","린":"10","한":"10","손":"10",
+      // 11번
+      "현":"11","진":"11","경":"11","극":"11","신":"11","청":"11","피":"11","염":"11","키":"11","창":"11",
+      "간":"11","닷":"11","심":"11","척":"11","타":"11","음":"11","천":"11","세":"11","감":"11","본":"11",
+      "션":"11","첨":"11","탐":"11","품":"11","위":"11","균":"11","견":"11","벼":"11","숀":"11","초":"11",
+      "파":"11","총":"11","의":"11","검":"11","곤":"11","변":"11","직":"11","카":"11","판":"11","휘":"11"
+    };
 
     /****************************************************************
-      (2) careerData (여기서는 2,3,4,5,6,7,8,9,10,11 모두 포함 예시)
-          personality와 strengths는 title/desc 형태
-    ****************************************************************/
-   const careerData = {
-         // ================= 2번 (예시: 상세)
-         "2": {
+     * (2) 진로/성격/강점 데이터
+     ****************************************************************/
+    const careerData = {
+      "2": {
            personality: [
              {
                title: "냉정하고 이성적",
@@ -675,6 +763,11 @@
          }
        };
 
+
+
+    /****************************************************************
+     * 3) 메인 클래스: CareerAnalyzer
+     ****************************************************************/
     class CareerAnalyzer {
       constructor() {
         this.form = document.getElementById('analyzer-form');
@@ -687,6 +780,7 @@
 
       handleSubmit(e) {
         e.preventDefault();
+
         // 초기화
         this.errorElement.style.display = 'none';
         this.resultElement.style.display = 'none';
@@ -697,30 +791,34 @@
           return;
         }
 
-        // 1) 이름 전체 글자를 순회하여 번호들을 얻기
+        // 1) 이름 전체 글자를 순회
         const chars = Array.from(fullName);
-        const mappedNumbers = [];
+        const recognizedChars = []; // [{ch:'홍', num:'9'}, ...]
+        const notFoundChars = [];   // ['?', '%', ...]
+
         chars.forEach(ch => {
           const num = numberMappings[ch];
-          if (num) mappedNumbers.push(num);
+          if (num) {
+            recognizedChars.push({ ch, num });
+          } else {
+            notFoundChars.push(ch);
+          }
         });
-        if (mappedNumbers.length === 0) {
-          this.showError(`죄송합니다. 입력된 이름 "${fullName}" 에 해당하는 매핑 데이터를 찾을 수 없습니다.`);
+
+        // 2) 전혀 인식된 글자가 없다면 에러
+        if (recognizedChars.length === 0) {
+          this.showError(`죄송합니다. 입력된 이름 "${fullName}"에서 매핑되는 글자가 전혀 없습니다.`);
           return;
         }
 
-        // 2) 중복 제거 (원하면 제거, 안원하면 주석 처리)
-        const uniqueNumbers = [...new Set(mappedNumbers)]; 
-        // 3) 각 number별 data를 합산
-        const combinedResult = this.aggregateData(uniqueNumbers);
+        // 3) 인식된 글자 → number 배열 (중복 제거 X)
+        const allNums = recognizedChars.map(obj => obj.num);
 
-        // 만약 combinedResult 비었으면 에러
-        if (!combinedResult) {
-          this.showError(`죄송합니다. "${fullName}" 에 해당하는 데이터가 충분치 않습니다.`);
-          return;
-        }
+        // 4) 데이터 합산
+        const combinedResult = this.aggregateData(allNums);
 
-        this.displayResult(combinedResult);
+        // 5) 결과 표시
+        this.displayResult(combinedResult, notFoundChars);
       }
 
       showError(msg) {
@@ -728,9 +826,7 @@
         this.errorElement.style.display = 'block';
       }
 
-      // 여러 번호(예: [9,5,7])에 해당하는 data를 합침
       aggregateData(numbers) {
-        // 최종 합산 객체
         const finalData = {
           personality: [],
           strengths: [],
@@ -740,23 +836,19 @@
 
         numbers.forEach(num => {
           const data = careerData[num];
-          if (!data) return; // 없으면 스킵
+          if (!data) return;
 
-          // personality, strengths 누적
-          if (data.personality && Array.isArray(data.personality)) {
+          if (data.personality) {
             finalData.personality.push(...data.personality);
           }
-          if (data.strengths && Array.isArray(data.strengths)) {
+          if (data.strengths) {
             finalData.strengths.push(...data.strengths);
           }
-          // careers 누적
-          if (data.careers && Array.isArray(data.careers)) {
+          if (data.careers) {
             finalData.careers.push(...data.careers);
           }
-          // advice 누적 (줄바꿈 처리)
           if (data.advice) {
-            // 여러 문구를 한 덩어리로 합치기
-            // 예) "2번 advice" + "\n" + "5번 advice" ...
+            // 여러 개 번호일 경우, 조언을 이어붙임
             finalData.advice += `* ${data.advice}\n`;
           }
         });
@@ -764,8 +856,21 @@
         return finalData;
       }
 
-      displayResult(result) {
-        // personality 표시
+      displayResult(result, notFoundChars) {
+        // (1) 매핑되지 않은 글자 안내
+        const missingSection = document.getElementById('missing-section');
+        if (notFoundChars.length > 0) {
+          const missingMsg = notFoundChars.map(c => `「${c}」 → 없음`).join(', ');
+          missingSection.innerHTML = `
+            <div style="color:#e74c3c;font-weight:600;">
+              인식 불가 글자: ${missingMsg}
+            </div>
+          `;
+        } else {
+          missingSection.innerHTML = '';
+        }
+
+        // (2) 성격 특성
         const personalityList = document.getElementById('personality-list');
         if (result.personality && result.personality.length > 0) {
           personalityList.innerHTML = result.personality.map(item => `
@@ -778,7 +883,7 @@
           personalityList.innerHTML = '<li>정보 없음</li>';
         }
 
-        // strengths 표시
+        // (3) 강점
         const strengthsList = document.getElementById('strengths-list');
         if (result.strengths && result.strengths.length > 0) {
           strengthsList.innerHTML = result.strengths.map(item => `
@@ -791,7 +896,7 @@
           strengthsList.innerHTML = '<li>정보 없음</li>';
         }
 
-        // careers 표시
+        // (4) 추천 진로
         const careersList = document.getElementById('careers-list');
         if (result.careers && result.careers.length > 0) {
           careersList.innerHTML = result.careers.map(c => `
@@ -804,14 +909,15 @@
           careersList.innerHTML = '<div>직업 정보 없음</div>';
         }
 
-        // advice 표시
+        // (5) 조언
         document.getElementById('advice-text').textContent = result.advice || "추가 조언이 없습니다.";
 
-        // 결과 표시
+        // 최종 결과 표시
         this.resultElement.style.display = 'block';
       }
     }
 
+    // 페이지 로드 후 초기화
     document.addEventListener('DOMContentLoaded', () => {
       new CareerAnalyzer();
     });
